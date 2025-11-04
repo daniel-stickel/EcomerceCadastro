@@ -1,0 +1,24 @@
+@layer components {
+  /* Estilo base para os inputs */
+  .input-retro {
+    @apply w-full p-3 bg-gray-700 text-retro-white border border-gray-600 rounded-md 
+           focus:outline-none focus:ring-2 focus:ring-retro-blue focus:border-retro-blue
+           transition duration-200;
+  }
+  
+  /* Ajuste para o input de data, se necessário */
+  .input-retro[type="date"] {
+    @apply block; /* Inputs de data podem precisar de 'block' */
+    /* Você pode precisar de mais estilos para o 'datepicker' */
+  }
+
+  /* Estilo de erro aplicado dinamicamente */
+  .input-error {
+    @apply border-retro-red focus:ring-retro-red focus:border-retro-red;
+  }
+
+  /* Estilo para as mensagens de erro */
+  .error-message {
+    @apply mt-1 text-retro-red text-xs;
+  }
+}
